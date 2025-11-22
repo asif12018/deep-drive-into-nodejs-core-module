@@ -1,0 +1,22 @@
+
+
+const args = process.argv;
+
+// process.arg[0] = node path
+// process.arg[1] = file path
+// process.arg[2] = first actual argument
+
+const name = args[2] || "guest";
+const time = new Date().getHours();
+
+let greeting;
+
+if(time < 12){
+    greeting = 'Good morning';
+}else if(time < 18){
+    greeting = 'Afternoon';
+}else{
+    greeting = 'Good Evening';
+};
+
+console.log(`${greeting} ${name}`);
