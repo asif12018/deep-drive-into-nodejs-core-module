@@ -13,3 +13,13 @@ try{
 }catch(err){
    console.error('error: ',err.message);
 }
+
+const content2 = "This is a content too, \n asynchronous!!";
+
+fs.writeFile('./output/test-async.txt', content2, (error)=>{
+  if(error){
+    console.error(error.message);
+  }else{
+    console.log('file written successfully')
+  }
+})
